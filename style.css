@@ -1,0 +1,476 @@
+```css
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff3b30;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ff3b30;
+}
+
+
+/* TOMBOL MENU MOBILE */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px 50px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    color: #ff3b30;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff3b30;
+    display: block;
+}
+
+.hero p:not(.subtitle) {
+    color: #ddd;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+
+/* BUTTON */
+.btn,
+.program-btn,
+.price-btn {
+    display: inline-block;
+
+    background-color: #ff3b30;
+    color: white;
+
+    border: none;
+    padding: 13px 25px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.btn:hover,
+.program-btn:hover,
+.price-btn:hover {
+    background-color: white;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+
+/* SECTION */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.dark-section {
+    max-width: none;
+    background-color: #181818;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #ff3b30;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-top: 8px;
+}
+
+
+/* ABOUT */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-box {
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #222;
+    border: 1px solid #333;
+}
+
+.info-box h3 {
+    color: #ff3b30;
+    font-size: 32px;
+}
+
+
+/* CARD */
+.card-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #222;
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 1px solid #333;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ff3b30;
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+
+/* HARGA */
+.harga-card {
+    position: relative;
+}
+
+.harga {
+    color: #ff3b30;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.harga span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.harga-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.harga-card li {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.populer {
+    border: 2px solid #ff3b30;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: #ff3b30;
+    color: white;
+
+    padding: 5px 12px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* FORM */
+.contact-form {
+    max-width: 650px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: #222;
+    color: white;
+
+    border: 1px solid #444;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff3b30;
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #0b0b0b;
+    color: #aaa;
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #111;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 0;
+
+        border-top: 1px solid #333;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px;
+    }
+
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 75px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
+
+
+/* HP KECIL */
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+}
+```
